@@ -42,7 +42,7 @@ class Dog: Tamable {
     }
     
     func protect() { 
-        print("🐶 \(name)")
+        print("🐶 \(name) barks at the mailman")
     }
 }
 
@@ -61,7 +61,9 @@ class Cat: Tamable {
     func play() {
         print("🐱 \(name) knocks a cup off the table.")
     }
-    func protect() { }
+    func protect() {
+        print("🐱 \(name) extends its claws and scratches you.")
+    }
 }
 
 class Bear: WildAnimal{ //
@@ -86,8 +88,8 @@ class Zebra: WildAnimal{ //
         self.species = species
     }
     
-    func attack() { }
-    func wander() { }
+    func attack() { print("🦓 \(species) Charges at you and bumps you with its head")}
+    func wander() { print("🦓 \(species) Looks for some greens to eat")}
     func run()    {}
 }
 
@@ -100,6 +102,6 @@ class Lion: WildAnimal{
         self.species = species
     }
     
-    func attack() { }
-    func wander() { }
+    func attack() {print("🦁 \(species) Roars and charges at you!") }
+    func wander() {print("🦁 \(species) Runs away to find easier prey")}
 }

@@ -39,6 +39,15 @@ struct ContentView: View {
                         }
                         .buttonStyle(.borderedProminent)
                         .controlSize(.mini)
+                        
+                        Button("Protect"){
+                            pet.protect()
+                        }
+                        .buttonStyle(.bordered)
+                        .controlSize(.mini)
+                        .tint(.green)
+                    
+            
                     }
                     .padding(.vertical, 4)
                     }
@@ -50,6 +59,12 @@ struct ContentView: View {
                             Text(animal.species)
                             Spacer()
                             
+                            Button("Wander"){
+                                animal.wander()
+                            }
+                            .buttonStyle(.bordered)
+                            .controlSize(.mini)
+                            
                             Button("Attack") {
                                 animal.attack()
                             }
@@ -57,11 +72,6 @@ struct ContentView: View {
                             .controlSize(.mini)
                             .tint(.red)
                             
-                            Button("Wander"){
-                                animal.wander()
-                            }
-                            .buttonStyle(.bordered)
-                            .controlSize(.mini)
                         }
                         .padding(.vertical, 4)
                     }
